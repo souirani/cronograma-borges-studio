@@ -26,7 +26,7 @@
   .post-card { border: 1px solid #e8e8e8; border-radius: 14px; overflow: hidden; background: #fff; transition: border-color 0.2s, box-shadow 0.2s; }
   .post-card:hover { border-color: #ccc; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
 
-  .post-header { display: grid; grid-template-columns: 36px 36px 100px 1fr auto auto; align-items: center; gap: 12px; padding: 16px 20px; cursor: pointer; user-select: none; }
+  .post-header { display: grid; grid-template-columns: 36px 1fr auto auto; align-items: center; gap: 12px; padding: 16px 20px; cursor: pointer; user-select: none; }
   .post-num { font-size: 12px; font-weight: 700; color: #bbb; }
   .post-dia { font-size: 11px; font-weight: 600; color: #111; }
   .post-date { font-size: 11px; font-weight: 400; color: #aaa; }
@@ -585,8 +585,8 @@ posts.forEach((p, i) => {
   card.innerHTML = `
     <div class="post-header" onclick="toggle(${i})">
       <span class="post-num">${p.num}</span>
-      <span class="post-dia">${p.dia}</span>
-      <span class="post-date">${p.date}</span>
+      
+      
       <span class="post-title">${p.title}</span>
       <span class="pill ${p.tag}">${p.formato}</span>
       <span class="toggle-btn" id="btn-${i}">↓</span>
